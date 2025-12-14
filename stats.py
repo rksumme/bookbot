@@ -12,3 +12,18 @@ def count_char(book):
         else:
             characters[letter] += 1
     return characters
+
+def sort_by_num(items):
+    return items["num"]
+
+def organize(dictionary):
+    dict_list = []
+    
+    for char in dictionary:
+        dict_list.append({
+            "char":char,
+            "num":dictionary[char],
+            })
+    
+    dict_list.sort(reverse=True, key=sort_by_num)
+    return dict_list
